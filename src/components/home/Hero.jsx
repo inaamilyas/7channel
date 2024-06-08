@@ -47,14 +47,14 @@ function Hero() {
                 className="flex-1 h-[550px] xl:h-[500px] p-5 rounded-[20px] shadow-lg bg-gray-100 hover:bg-gray-200"
               >
                 <div className="flex flex-col md:flex-row items-center h-full">
-                  <div className="w-[30%] h-full p-3">
+                  <div className="w-full md:w-[30%] h-full p-3">
                     <img
                       className="w-full rounded-full"
                       src={card.img}
                       alt=""
                     />
                   </div>
-                  <div className="w-[70%] h-full p-5 flex flex-col justify-between  items-center">
+                  <div className="w-full md:w-[70%] h-full p-5 flex flex-col justify-between  items-center">
                     <div>
                       <svg
                         className="w-[50px] h-[50px] "
