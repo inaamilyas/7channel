@@ -1,10 +1,10 @@
 import React from "react";
 
-const PeopleCard = ({ info, width }) => {
+const PeopleCard = ({ info, classes }) => {
   return (
-    <div style={{ width }} className={`h-fit relative group mb-5`}>
+    <div className={`h-fit relative group mb-5 ${classes}`}>
       <img
-        className="w-full"
+        className="w-full "
         src="https://channel7.com.pk/wp-content/uploads/2023/04/Jawad-Humayun.jpg"
         alt=""
       />
@@ -18,15 +18,15 @@ const PeopleCard = ({ info, width }) => {
 };
 
 const PeopleContainer = ({ heading, data, itemsToShow }) => (
-  <section className="py-10">
-    <div className="container mx-auto mb-10">
+  <section className="px-5 py-[60px] h-[60%]">
+    <div className="container h-full mx-auto mb-10">
       <h2>{heading}</h2>
-      <div className="w-full flex items-center flex-wrap justify-between">
+      <div className="w-full flex items-center flex-wrap justify-start gap-7">
         {data.map((item, idx) => (
           <PeopleCard
             key={idx}
             info={item}
-            width={`${parseInt(100 / itemsToShow - 1)}%`}
+            classes={`w-full md:w-[450px]`}
           />
         ))}
       </div>
@@ -224,16 +224,16 @@ function WhoWeAre() {
 
   return (
     <>
-      <section className="py-8">
-        <div className="w-[100%] h-[30vh] flex items-center justify-center bg-whoweare ">
+      <section className="">
+        <div className="w-[100%] h-[calc(100vh-88px)] flex items-center justify-center bg-whoweare ">
           <h1 className="text-[50px] text-white font-extrabold ">Who We Are</h1>
         </div>
       </section>
 
       <section>
-        <div className="container mx-auto py-5 h-fit ">
-          <div className="flex items-center justify-between gap-6 w-full">
-            <div className="w-[50%] h-full px-8">
+        <div className="container mx-auto px-5 py-[60px] h-fit ">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 w-full">
+            <div className="flex-1 h-full px-8">
               <h1 className="my-5 who-heading">Skilled Team of Creators</h1>
               <p className="text-[25px] text-gray-600 leading-[40px] ">
                 “We are result oriented agency with a clear objective to make
@@ -243,7 +243,7 @@ function WhoWeAre() {
                 exceptional creativity which helps your brand stand-out.”
               </p>
             </div>
-            <div className="w-[50%] h-full px-8">
+            <div className="flex-1 h-full px-8">
               <img
                 src="https://channel7.com.pk/wp-content/uploads/2023/03/SkillTeam.jpg"
                 alt=""
@@ -253,18 +253,18 @@ function WhoWeAre() {
         </div>
       </section>
 
-      <h1 className="bg-[red] text-center text-[45px] font-bold text-white py-2 my-5">
+      <h1 className="background-color text-center text-[45px] font-bold text-white py-2 my-5">
         Our Team
       </h1>
 
       <PeopleContainer
         heading="Managing Partners"
         data={managingPartners}
-        itemsToShow={2}
+        itemsToShow={3}
       />
-      <PeopleContainer heading="Directors" data={direcotors} itemsToShow={3} />
-      <PeopleContainer heading="Creative" data={creative} itemsToShow={4} />
-      <PeopleContainer
+      {/* <PeopleContainer heading="Directors" data={direcotors} itemsToShow={3} />
+      <PeopleContainer heading="Creative" data={creative} itemsToShow={4} /> */}
+      {/* <PeopleContainer
         heading="Arts & Design"
         data={artsDesign}
         itemsToShow={3}
@@ -273,13 +273,13 @@ function WhoWeAre() {
         heading="Marketing and Client Services"
         data={clientServices}
         itemsToShow={3}
-      />
+      /> */}
 
       <section>
-        <div className="container mx-auto  py-10">
+        <div className="container mx-auto px-5 py-[60px]">
           <div className="flex items-center justify-between flex-wrap">
             {cards.map((item, idx) => (
-              <div className="mb-[50px] w-[33%] px-3 flex flex-col justify-between items-center gap-[10px]">
+              <div className="mb-[50px] w-full md:w-[50%] lg:w-[32%] px-3 flex flex-col justify-between items-center gap-[10px]">
                 <img
                   className="rounded-[50%] w-[50%] text-center"
                   src="https://channel7.com.pk/wp-content/uploads/2021/01/Owais-Hamid-Khan.jpg"

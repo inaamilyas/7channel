@@ -75,15 +75,15 @@ function AboutUs() {
   ];
   return (
     <>
-      <section className="py-8">
-        <div className="w-[100%] h-[30vh] flex items-center justify-center offer-bg ">
-          <h1 className="text-[50px] text-white font-extrabold ">About Us</h1>
+      <section className="">
+        <div className="w-[100%] h-[50vh] flex items-center justify-center about-bg ">
+          <h1 className="text-[50px] text-white  font-bold ">About Us</h1>
         </div>
       </section>
 
       <section className="w-[100%] py-[60px] gradient-bg ">
         <div className="container mx-auto h-full">
-          <p className="text-[18px] text-center leading-[30px] my-5">
+          <p className="text-[20px] text-center leading-[30px] my-5">
             Since 1990, we’re a value-led advertising agency that creates
             concepts to empower brands and ideas that positively impact
             individuals, communities and nations. Based in Islamabad, Lahore,
@@ -93,7 +93,8 @@ function AboutUs() {
             advertising for all possible segments of society across the board
             with cutting edge campaigns.
           </p>
-          <p className="text-[18px] text-center leading-[30px] my-5">
+          <br />
+          <p className="text-[20px] text-center leading-[30px] my-5">
             We’re a value-led advertising agency that creates concepts to
             empower brands and ideas that positively impact individuals,
             communities and nations. Based in Islamabad, Lahore, Karachi,

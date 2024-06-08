@@ -37,16 +37,25 @@
 }
 
 .bg-whoweare {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.888)),
-    url("https://channel7.com.pk/wp-content/uploads/2023/04/c7-Who-we-are3.jpg");
+  background: linear-gradient(#6494ed29, #6495ed),
+    url("../public/images/who-we-are.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .offer-bg {
   background: linear-gradient(#6494ed29, #6495ed),
-    url("https://channel7.com.pk/wp-content/uploads/2023/07/About-Us-Banner.jpg");
+    url("../public/images/what-we-offer.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-bg {
+  background: linear-gradient(#6494ed29, #6495ed),
+    url("../public/images/about-page-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .who-heading {
   font-size: 40px;
