@@ -77,7 +77,7 @@ function AboutUs() {
     <>
       <section className="py-8">
         <div className="w-[100%] h-[30vh] flex items-center justify-center offer-bg ">
-          <h1 className="text-[50px] text-[red] font-extrabold ">About Us</h1>
+          <h1 className="text-[50px] text-white font-extrabold ">About Us</h1>
         </div>
       </section>
 

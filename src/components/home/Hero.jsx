@@ -19,14 +19,14 @@ function Hero() {
   return (
     <>
       <section className="w-[100%] h-[calc(100vh-100px)] bg-home-hero">
-        <div className="container mx-auto h-full">
+        <div className="container mx-auto h-full px-5">
           <div className="h-full flex items-center justify-center gap-10 flex-wrap">
-            <h1 className="text-[50px] font-bold text-white text-center">
+            <h1 className="text-[30px] font-bold text-white text-center">
               Welcome to{" "}
-              <span className="block text-[70px] ">
+              <span className="block text-[40px] sm:text-[70px] ">
                 <Typewriter
                   options={{
-                    strings: ['Elision <span class="text-[#6495ed]">Advertising</span>'],
+                    strings: ['Elision <span class="text-primary">Advertising</span>'],
                     autoStart: true,
                     loop: true,
                     
@@ -38,15 +38,15 @@ function Hero() {
         </div>
       </section>
 
-      <section className="w-[100%] min-h-[100vh] gradient-bg py-12">
-        <div className="container mx-auto h-full">
+      <section className="w-[100%] gradient-bg ">
+        <div className="container mx-auto h-full px-5 py-[60px]">
           <div className="h-full flex flex-col lg:flex-row items-center justify-between gap-10">
             {heroSectionContent.map((card, idx) => (
               <div
                 key={idx}
-                className="flex-1 h-[550px] xl:h-[500px] p-5 rounded-[20px] shadow-lg bg-gray-200 hover:bg-gray-300"
+                className="flex-1 h-[550px] xl:h-[500px] p-5 rounded-[20px] shadow-lg bg-gray-100 hover:bg-gray-200"
               >
-                <div className="flex h-full">
+                <div className="flex flex-col md:flex-row items-center h-full">
                   <div className="w-[30%] h-full p-3">
                     <img
                       className="w-full rounded-full"
@@ -62,7 +62,7 @@ function Hero() {
                         viewBox="0 0 448 512"
                       >
                         <path
-                          fill="black"
+                          fill="#6495ed"
                           d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
                         />
                       </svg>
@@ -70,10 +70,10 @@ function Hero() {
                     </div>
 
                     <div>
-                      <h1 className="my-5 text-[24px] text-black font-bold text-center w-full">
+                      <h1 className="my-5 text-[24px] text-primary font-bold text-center w-full">
                         {card.name}
                       </h1>
-                      <a className="text-[18px] px-5 py-2 bg-black block mx-auto rounded-full text-center font-bold text-white">
+                      <a className="text-[18px] px-5 py-2 block mx-auto rounded-full text-center font-bold text-white background-color">
                         {card.designation}
                       </a>
                     </div>

@@ -8,6 +8,9 @@
 .text-color {
   color: #ffffff !important;
 }
+.text-primary {
+  color: #6495ed !important;
+}
 .navbar-item {
   font-size: 18px;
   font-weight: bold;
@@ -20,17 +23,17 @@
 }
 
 .img-shadow {
-  box-shadow: 20px 20px 0px black !important;
+  box-shadow: 20px 20px 0px #6495ed !important;
 }
 .bg-home-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.888)),
+  background: linear-gradient(hwb(0 0% 100% / 0.5), rgba(0, 0, 0, 0.888)),
     url("../public/images/Elision-Advertising-banner-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .gradient-bg {
-  background: linear-gradient(to bottom, #00000000, #00000029);
+  background: linear-gradient(to bottom, #ffffff, #6494ed48);
 }
 
 .bg-whoweare {
@@ -41,10 +44,9 @@
   background-position: center;
 }
 .offer-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.888)),
+  background: linear-gradient(#6494ed29, #6495ed),
     url("https://channel7.com.pk/wp-content/uploads/2023/07/About-Us-Banner.jpg");
   background-repeat: no-repeat;
-  background-position: center;
 }
 .who-heading {
   font-size: 40px;

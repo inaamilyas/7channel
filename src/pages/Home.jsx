@@ -55,15 +55,15 @@ function Home() {
       <Hero/>
 
       {/* why choose us  */}
-      <section className="w-[100%] py-[60px]">
-        <div className="container mx-auto h-full">
-          <h4 className="uppercase text-[black] font-medium text-lg">
+      <section className="w-[100%]">
+        <div className="container mx-auto h-full  px-5 py-[60px]">
+          <h4 className="uppercase text-primary font-medium text-lg">
             Why choose us
           </h4>
 
           <div className=" flex flex-col lg:flex-row items-center justify-between gap-10 flex-wrap">
             <div className="py-5 flex-1">
-              <h1 className="text-[35px] font-bold text-[black] ">
+              <h1 className="text-[35px] font-bold text-primary ">
                 A Brief Intro
               </h1>
               <p className="text-[25px] my-8 text-[#6f6c8c] ">
@@ -75,8 +75,7 @@ function Home() {
                 are here to cater to this essential need.
               </p>
               <a
-                className="uppercase border-[2px] border-[black] rounded-[5px] px-8   py-4 text-[black] font-semibold  "
-                href=""
+                className="my-6 cursor-pointer uppercase border-[2px] border-[#6495ed] text-[#6495ed] rounded-[5px] px-8 py-4 font-semibold hover:bg-[#6495ed] hover:text-[white] transition-all duration-1000"
               >
                 Discover more
               </a>
@@ -94,8 +93,8 @@ function Home() {
       </section>
 
       {/* What we do  */}
-      <section className="w-[100%] py-[60px] gradient-bg ">
-        <div className="container mx-auto h-full">
+      <section className="w-[100%] ">
+        <div className="container mx-auto h-full  px-5 py-[60px]">
           <div className=" flex flex-col-reverse lg:flex-row items-center justify-between gap-10 flex-wrap">
             <div className="py-5 flex-1">
               <img
@@ -105,7 +104,7 @@ function Home() {
               />
             </div>
             <div className="py-5 flex-1">
-              <h1 className="text-[35px] font-bold text-[black] ">
+              <h1 className="text-[35px] font-bold text-primary ">
                 What We Do
               </h1>
               <p className="text-[25px] my-8 text-[#6f6c8c] ">
@@ -118,8 +117,7 @@ function Home() {
                 out of the box solutions tailored to your unique requirements.
               </p>
               <a
-                className="uppercase border-[2px] border-[black] rounded-[5px] px-8   py-4 text-[black] font-semibold  "
-                href=""
+                className="my-6 cursor-pointer uppercase border-[2px] border-[#6495ed] text-[#6495ed] rounded-[5px] px-8 py-4 font-semibold hover:bg-[#6495ed] hover:text-[white] transition-all duration-1000"
               >
                 Discover more
               </a>
@@ -129,16 +127,16 @@ function Home() {
       </section>
 
       {/* What We Offer  */}
-      <section className="w-[100%] py-[60px] min-h-[100vh]">
-        <div className="container mx-auto h-full">
-          <h1 className="text-[35px] font-bold text-[black] text-center">
+      <section className="w-[100%] min-h-[100vh]">
+        <div className="container mx-auto h-full  px-5 py-[60px]">
+          <h1 className="text-[35px] font-bold text-primary text-center">
             What We Offer
           </h1>
           <div className=" flex items-center justify-between flex-wrap py-8">
             {offers.map((offer, idx) => (
               <div
                 key={idx}
-                className="mb-10  w-[100%] md:w-[48%] lg:w-[30%] xl:w-[24%] flex-none h-[500px] bg-[#3c43969d] rounded-[15px] text-white hover:scale-[1.05] hover:bg-[#3c4396] transition-all duration-500 "
+                className="mb-10  w-[100%] md:w-[48%] lg:w-[30%] xl:w-[24%] flex-none h-[500px] bg-[#6495ed9d] rounded-[15px] text-white hover:scale-[1.05] hover:bg-[#6495ed] transition-all duration-500 "
               >
                 <div className="flex flex-col items-center justify-between py-7 h-full gap-3">
                   <div className="flex flex-col items-center gap-4">
@@ -160,11 +158,11 @@ function Home() {
                   </div>
 
                   <div>
-                    <button className="font-bold text-lg px-8 text-center border-white border-[2px] hover:bg-white hover:text-black rounded-[5px] py-3 group ">
+                    <button className="font-bold text-lg px-8 text-center border-white border-[2px] hover:bg-white hover:text-[#6495ed] rounded-[5px] py-3 group transition-all duration-1000">
                       Read More
                       <svg
   
-                        className="w-[20px] fill-white group-hover:fill-black inline-block ml-3  "
+                        className="w-[20px] fill-white group-hover:fill-[#6495ed] inline-block ml-3  "
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
                         stroke="currentColor"
