@@ -39,9 +39,9 @@ function Cities() {
     <>
      <section className="w-[100%] h-fit border-t-[3px] py-20 ">
         <div className="container mx-auto h-full">
-          <div className=" flex items-center justify-between flex-wrap">
+          <div className="h-full flex items-center justify-start lg:justify-between flex-wrap">
             {cities.map((city, idx) => (
-              <div key={idx} className="w-[19%] h-[300px]  ">
+              <div key={idx} className="mb-4 w-[100%]  sm:w-[50%] h-[400px] md:w-[32%] md:h-[350px] lg:w-[19%] lg:h-[300px]">
                 <div className="flex flex-col items-center justify-around h-full gap-3">
                   <div className="flex flex-col items-center gap-4">
                     <img className=" h-[120px]" src={city.icon} alt="" />

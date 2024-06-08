@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.background-color {
+  background: #6495ed !important;
+}
+.text-color {
+  color: #ffffff !important;
+}
+.navbar-item {
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.8s;
+}
+.active,
+.navbar-item:hover {
+  background: #ffffff !important;
+  color: #6495ed !important;
+}
+
 .img-shadow {
   box-shadow: 20px 20px 0px black !important;
 }
@@ -16,15 +33,16 @@
   background: linear-gradient(to bottom, #00000000, #00000029);
 }
 
-
 .bg-whoweare {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.888)),url("https://channel7.com.pk/wp-content/uploads/2023/04/c7-Who-we-are3.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.888)),
+    url("https://channel7.com.pk/wp-content/uploads/2023/04/c7-Who-we-are3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .offer-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.888)),url("https://channel7.com.pk/wp-content/uploads/2023/07/About-Us-Banner.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.888)),
+    url("https://channel7.com.pk/wp-content/uploads/2023/07/About-Us-Banner.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -34,7 +52,6 @@
   font-weight: 800;
   color: black;
 }
-
 
 .slick-prev,
 .slick-next {
@@ -66,15 +83,3 @@
     margin: 0vw !important;
   }
 }
-
-/* @media screen and (max-width: 480px) {
-  .test .slick-track {
-  height: 40vh !important;
-}
-}
-
-@media screen and (max-width: 880px) {
-  .test .slick-track {
-  height: 60vh !important;
-}
-} */

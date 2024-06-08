@@ -61,7 +61,7 @@ function Home() {
             Why choose us
           </h4>
 
-          <div className=" flex items-center justify-between gap-10 flex-wrap">
+          <div className=" flex flex-col lg:flex-row items-center justify-between gap-10 flex-wrap">
             <div className="py-5 flex-1">
               <h1 className="text-[35px] font-bold text-[black] ">
                 A Brief Intro
@@ -96,7 +96,7 @@ function Home() {
       {/* What we do  */}
       <section className="w-[100%] py-[60px] gradient-bg ">
         <div className="container mx-auto h-full">
-          <div className=" flex items-center justify-between gap-10 flex-wrap">
+          <div className=" flex flex-col-reverse lg:flex-row items-center justify-between gap-10 flex-wrap">
             <div className="py-5 flex-1">
               <img
                 className=""
@@ -129,7 +129,7 @@ function Home() {
       </section>
 
       {/* What We Offer  */}
-      <section className="w-[100%] py-[60px] h-[100vh]">
+      <section className="w-[100%] py-[60px] min-h-[100vh]">
         <div className="container mx-auto h-full">
           <h1 className="text-[35px] font-bold text-[black] text-center">
             What We Offer
@@ -138,9 +138,9 @@ function Home() {
             {offers.map((offer, idx) => (
               <div
                 key={idx}
-                className="w-[24%] h-[500px] bg-[black] rounded-[15px] text-white hover:scale-[1.05] hover:bg-[#3c4396] transition-all duration-500 "
+                className="mb-10  w-[100%] md:w-[48%] lg:w-[30%] xl:w-[24%] flex-none h-[500px] bg-[#3c43969d] rounded-[15px] text-white hover:scale-[1.05] hover:bg-[#3c4396] transition-all duration-500 "
               >
-                <div className="flex flex-col items-center justify-around h-full gap-3">
+                <div className="flex flex-col items-center justify-between py-7 h-full gap-3">
                   <div className="flex flex-col items-center gap-4">
                     <img className="w-[150px] " src={offer.icon} alt="" />
                     <h1 className="text-[25px] text-center font-bold ">
@@ -160,13 +160,14 @@ function Home() {
                   </div>
 
                   <div>
-                    <button className="font-bold text-lg px-8 rounded-[5px] py-3 ">
+                    <button className="font-bold text-lg px-8 text-center border-white border-[2px] hover:bg-white hover:text-black rounded-[5px] py-3 group ">
                       Read More
                       <svg
-                        className="w-[20px] inline-block ml-3  "
+  
+                        className="w-[20px] fill-white group-hover:fill-black inline-block ml-3  "
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
-                        fill="white"
+                        stroke="currentColor"
                       >
                         <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
                       </svg>

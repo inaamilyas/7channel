@@ -4,8 +4,8 @@ function Footer() {
   return (
     <>
     <footer className="w-[100%] py-5 bg-black text-white ">
-    <div className="container mx-auto flex justify-around items-center">
-        <p className="flex-[3]">
+    <div className="container mx-auto flex justify-around items-center flex-col lg:flex-row gap-3 lg:gap-0">
+        <p className="flex-[3] text-center lg:text-start">
           Office# 15, Second Floor, Building A5, DTEC, D.S.O, Dubai, U.A.E.
         </p>
         <div className="flex-1 flex items-center gap-4">
