@@ -37,15 +37,15 @@ const cities = [
 function Cities() {
   return (
     <>
-     <section className="w-[100%] h-fit border-red-500 border-t-[3px] py-20 ">
+     <section className="w-[100%] h-fit border-t-[3px] py-20 ">
         <div className="container mx-auto h-full">
           <div className=" flex items-center justify-between flex-wrap">
             {cities.map((city, idx) => (
-              <div key={idx} className="w-[19%] h-[300px]  bg-red-300">
+              <div key={idx} className="w-[19%] h-[300px]  ">
                 <div className="flex flex-col items-center justify-around h-full gap-3">
                   <div className="flex flex-col items-center gap-4">
                     <img className=" h-[120px]" src={city.icon} alt="" />
-                    <hr className="w-full border-b-[2px] border-red-500" />
+                    <hr className="w-full border-b-[2px] border-[black]" />
                     <h1 className="text-[25px] text-center font-bold uppercase ">
                       {city.name}
                     </h1>

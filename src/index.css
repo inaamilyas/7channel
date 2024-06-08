@@ -2,6 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-.img-shadow{
-    box-shadow: 20px 20px 0px red !important;
+.img-shadow {
+  box-shadow: 20px 20px 0px black !important;
 }
+.bg-home-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.888)),
+    url("../public/images/Elision\ Advertising\ banner\ image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.gradient-bg {
+  background: linear-gradient(to bottom, #00000000, #00000029);
+}
+
+
+.bg-whoweare {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.888)),url("https://channel7.com.pk/wp-content/uploads/2023/04/c7-Who-we-are3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.offer-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.888)),url("https://channel7.com.pk/wp-content/uploads/2023/07/About-Us-Banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.who-heading {
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: black;
+}
+
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.slick-dots li button {
+  display: none !important;
+}
+
+.slick-arrow .slick-next {
+  display: none !important;
+}
+
+.test .slick-track {
+  display: flex !important;
+  gap: 2vw !important;
+  /* height: 80vh !important; */
+}
+
+.pro .slick-track {
+  display: flex !important;
+  gap: 2vw !important;
+  /* margin: 0vw 12vw !important; */
+}
+
+@media screen and (max-width: 1400px) {
+  .pro .slick-track {
+    margin: 0vw !important;
+  }
+}
+
+/* @media screen and (max-width: 480px) {
+  .test .slick-track {
+  height: 40vh !important;
+}
+}
+
+@media screen and (max-width: 880px) {
+  .test .slick-track {
+  height: 60vh !important;
+}
+} */

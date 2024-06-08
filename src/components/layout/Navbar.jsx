@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -39,7 +39,7 @@ function Navbar() {
   }, [location]);
 
   return (
-    <nav className="bg-gray-800 p-5">
+    <nav className="bg-[black] p-5">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -90,45 +90,38 @@ function Navbar() {
           </div>
           <div className="flex w-full items-center justify-between">
             <div className="">
-              <img
-                className="w-[50px]"
-                src="https://channel7.com.pk/wp-content/uploads/2021/01/Channel-7-logo-Reverse.png"
-                alt=""
-              />
+              <NavLink to={"/"} className="text-[25px] font-bold text-white cursor-pointer active" >Elision Advertising</NavLink>
             </div>
             <div className="hidden md:ml-6 md:block">
               <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                <NavLink
+                  to={"/"}
+                  className=" hover:bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium"
                   aria-current="page"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink to={"/about"}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                    About Us
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink to={"/what-we-offer"}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                    What We Offer
-                </a>
-                <a
+                </NavLink>
+                <NavLink to={"/who-we-are"}
                   href="#"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Who We Are
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                </NavLink>
+                <NavLink to={"contact"}
+                  className="text-gray-300 bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   GET IN TOUCH
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
