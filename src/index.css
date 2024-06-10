@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .background-color {
-  background: #6495ed !important;
+  background: #000000 !important;
 }
 .text-color {
   color: #ffffff !important;
 }
 .text-primary {
-  color: #6495ed !important;
+  color: #000000 !important;
 }
 .navbar-item {
   font-size: 18px;
@@ -19,39 +19,42 @@
 .active,
 .navbar-item:hover {
   background: #ffffff !important;
-  color: #6495ed !important;
+  color: #000000 !important;
 }
-
+.post-shadow{
+  border: 1px solid white;
+  box-shadow: 1px 1px 20px #5d5d5d !important;
+}
 .img-shadow {
-  box-shadow: 20px 20px 0px #6495ed !important;
+  box-shadow: 20px 20px 0px #000000 !important;
 }
 .bg-home-hero {
-  background: linear-gradient(hwb(0 0% 100% / 0.5), rgba(0, 0, 0, 0.888)),
-    url("../public/images/Elision-Advertising-banner-image.jpg");
+  background: linear-gradient(hwb(0 0% 100% / 0.434), rgba(0, 0, 0, 0.495)),
+    url("../public/images/hero-bg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .gradient-bg {
-  background: linear-gradient(to bottom, #ffffff, #6494ed48);
+  background: linear-gradient(to bottom, #ffffff, #00000048);
 }
 
 .bg-whoweare {
-  background: linear-gradient(#6494ed29, #6495ed),
+  background: linear-gradient(#6494ed29, #000000),
     url("../public/images/who-we-are.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .offer-bg {
-  background: linear-gradient(#6494ed29, #6495ed),
+  background: linear-gradient(#6494ed29, #000000),
     url("../public/images/what-we-offer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .about-bg {
-  background: linear-gradient(#6494ed29, #6495ed),
+  background: linear-gradient(#6494ed29, #000000),
     url("../public/images/about-page-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;

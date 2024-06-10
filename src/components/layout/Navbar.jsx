@@ -16,7 +16,7 @@ function Navbar() {
 
   return (
     <nav className="background-color p-5 sticky top-0 z-[100]">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="mx-auto container px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
             {/* <!-- Mobile menu button--> */}
@@ -58,7 +58,8 @@ function Navbar() {
                 to={"/"}
                 className="text-[25px] font-bold cursor-pointer text-color"
               >
-                Elision Advertising
+                Elision Advertising SMC Private (Ltd){" "}
+                <span class="text-xs align-top">(R)</span>
               </Link>
             </div>
             <div className="hidden md:ml-6 lg:block">
@@ -71,27 +72,21 @@ function Navbar() {
                   Home
                 </NavLink>
                 <NavLink
-                  to={"/about"}
+                  to={"/featured-posts/1"}
                   className="rounded-md px-4 py-2 navbar-item text-color"
                 >
-                  About Us
+                  Posts
                 </NavLink>
                 <NavLink
                   to={"/what-we-offer"}
                   className="rounded-md px-4 py-2 navbar-item text-color"
                 >
-                  What We Offer
+                  Clients
                 </NavLink>
-                <NavLink
-                  to={"/who-we-are"}
-                  href="#"
-                  className="rounded-md px-4 py-2 navbar-item text-color"
-                >
-                  Who We Are
-                </NavLink>
+
                 <NavLink
                   to={"contact"}
-                  className="bg-[#6495ed] px-5 py-3 rounded-md text-[#FFFFFF] font-bold border-[1px] border-[#FFFFFF]  hover:bg-[#FFFFFF] hover:text-[#6495ed] transition-all duration-700 "
+                  className="bg-[#000000] px-5 py-3 rounded-md text-[#FFFFFF] font-bold border-[1px] border-[#FFFFFF]  hover:bg-[#FFFFFF] hover:text-[#000000] transition-all duration-700 "
                 >
                   GET IN TOUCH
                 </NavLink>

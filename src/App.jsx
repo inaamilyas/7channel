@@ -6,6 +6,7 @@ import WhoWeAre from "./pages/WhoWeAre";
 import WhatWeOffer from "./pages/WhatWeOffer";
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
+import Posts from "./pages/Posts";
 
 // Lazy load components
 const Home = lazy(() => import("./pages/Home"));
@@ -21,13 +22,8 @@ function App() {
       <Suspense fallback={<div>{/* <Loader /> */}</div>}>
         <Routes>
           <Route path={`/`} element={<Home />} />
-          <Route path={`/who-we-are`} element={<WhoWeAre />} />
-          <Route path={`/about`} element={<AboutUs />} />
-          <Route path={`/what-we-offer`} element={<WhatWeOffer />} />
+          <Route path={`/featured-posts/:id`} element={<Posts />} />
           <Route path={`/contact`} element={<ContactUs />} />
-          {/* <Route path={`/blog-detail/:name`} element={<BlogDetail />} />
-          <Route path={`/PrivacyPolicy`} element={<Privacy />} />
-          <Route path={`/TermsAndCondition`} element={<Terms />} /> */}
         </Routes>
       </Suspense>
       <Footer />

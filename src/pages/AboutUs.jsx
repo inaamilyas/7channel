@@ -66,12 +66,12 @@ function AboutUs() {
   ];
 
   const achievements = [
-      "https://channel7.com.pk/wp-content/uploads/2023/03/Award1.jpg",
-      "https://channel7.com.pk/wp-content/uploads/2023/03/Award2.jpg",
-      "https://channel7.com.pk/wp-content/uploads/2023/03/Award1.jpg",
-      "https://channel7.com.pk/wp-content/uploads/2023/03/Award2.jpg",
-      "https://channel7.com.pk/wp-content/uploads/2023/03/Award1.jpg",
-      "https://channel7.com.pk/wp-content/uploads/2023/03/Award2.jpg",
+    "https://channel7.com.pk/wp-content/uploads/2023/03/Award1.jpg",
+    "https://channel7.com.pk/wp-content/uploads/2023/03/Award2.jpg",
+    "https://channel7.com.pk/wp-content/uploads/2023/03/Award1.jpg",
+    "https://channel7.com.pk/wp-content/uploads/2023/03/Award2.jpg",
+    "https://channel7.com.pk/wp-content/uploads/2023/03/Award1.jpg",
+    "https://channel7.com.pk/wp-content/uploads/2023/03/Award2.jpg",
   ];
   return (
     <>
@@ -134,7 +134,7 @@ function AboutUs() {
         </div>
       </section>
 
-      <Cities/>
+      <Cities />
     </>
   );
 }
