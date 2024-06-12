@@ -65,7 +65,7 @@ function Navbar() {
               </Link>
             </div>
             <div className="hidden md:ml-6 lg:block">
-              <div className="flex space-x-4">
+              <div className="flex space-x-10">
                 <NavLink
                   to={"/"}
                   className="rounded-md px-4 py-2 navbar-item text-color"
@@ -79,12 +79,12 @@ function Navbar() {
                 >
                   Posts
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                   to={"/what-we-offer"}
                   className="rounded-md px-4 py-2 navbar-item text-color"
                 >
                   Clients
-                </NavLink>
+                </NavLink> */}
 
                 <NavLink
                   to={"contact"}
@@ -109,12 +109,12 @@ function Navbar() {
               Home
             </NavLink>
             <NavLink
-              to={"/about"}
+              to={"/featured-posts/1"}
               className=" navbar-item text-white  block rounded-md px-3 py-2  text-center"
             >
-              About Us
+             Posts
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to={"/what-we-offer"}
               className=" navbar-item text-white  block rounded-md px-3 py-2  text-center"
             >
@@ -125,7 +125,7 @@ function Navbar() {
               className=" navbar-item text-white  block rounded-md px-3 py-2  text-center"
             >
               Who We Are
-            </NavLink>
+            </NavLink> */}
             <NavLink
               to={"/contact"}
               className=" navbar-item text-white  block rounded-md px-3 py-2  text-center"

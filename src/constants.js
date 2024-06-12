@@ -112,36 +112,36 @@ export const featuredPosts = [
 ];
 
 export const clients = [
-  { img: "public/images/clients/bahria-town.png", name: "Bahria Town" },
+  { img: "/images/clients/bahria-town.png", name: "Bahria Town" },
   {
-    img: "public/images/clients/Coat_of_arms_of_Punjab.png",
+    img: "/images/clients/Coat_of_arms_of_Punjab.png",
     name: "Government of Punjab ",
   },
   {
-    img: "public/images/clients/Coat_of_arms_of_Sindh_Province.png",
+    img: "/images/clients/Coat_of_arms_of_Sindh_Province.png",
     name: "Government of Sindh",
   },
-  { img: "public/images/clients/Ispr.jpg", name: "ISPR" },
-  { img: "public/images/clients/KP_logo.png", name: "Government of KPK" },
+  { img: "/images/clients/Ispr.jpg", name: "ISPR" },
+  { img: "/images/clients/KP_logo.png", name: "Government of KPK" },
   {
-    img: "public/images/clients/ministry-of-privatation.jpeg",
+    img: "/images/clients/ministry-of-privatation.jpeg",
     name: "Privatisation Commission of Pakistan",
   },
   {
-    img: "public/images/clients/OGDCL_logo.png",
+    img: "/images/clients/OGDCL_logo.png",
     name: "Oil and Gas Development Company Limited ",
   },
-  { img: "public/images/clients/PakTelecom.png", name: "PTA" },
+  { img: "/images/clients/PakTelecom.png", name: "PTA" },
   {
-    img: "public/images/clients/ppib_logo.png",
+    img: "/images/clients/ppib_logo.png",
     name: "Private Power and Infrastructure Board ",
   },
   {
-    img: "public/images/clients/pseb.png",
+    img: "/images/clients/pseb.png",
     name: "Pakistan Software Export Board",
   },
   {
-    img: "public/images/clients/board-of-investment.png",
+    img: "/images/clients/board-of-investment.png",
     name: "Board of Investmen",
   },
 ];
