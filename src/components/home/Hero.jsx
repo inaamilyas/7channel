@@ -17,32 +17,39 @@ function Hero() {
 
   const newsPaperSlider = [
     {
-      img: "/images/newspaper/New-York-Times-Logo-PNG-File.png",
+      img: "/images/newspaper/new-york-times-image.webp",
       name: "The New York Times",
     },
     {
-      img: "/images/newspaper/the_new_york_times_cover.jpeg",
-      name: "The New York Times",
+      img: "/images/newspaper/globe-and-mail-canada.jpg",
+      name: "⁠The Globe and Mail, Canada",
     },
     {
-      img: "/images/newspaper/New-York-Times-Logo-PNG-File.png",
-      name: "The New York Times",
+      img: "/images/newspaper/South-China-Morning-Post.jpg",
+      name: "South China Morning Post",
     },
   ];
   return (
     <>
-      <section className="w-[100%] h-[calc(100vh-100px)] bg-home-hero">
-        <div className="h-full w-full image-slider-container overflow-hidden bg-[#00000033]">
-          <Slider {...settings} className="test">
+      <section className="w-[100%] h-[calc(100vh-100px)]">
+        <div className="h-full w-full image-slider-container overflow-hidden relative">
+          <Slider {...settings} className="test w-[100%]">
             {newsPaperSlider.map((item, idx) => (
-              <div className="h-[calc(100vh-100px)] w-[100%] relative">
-                {/* <img src={item.img} alt="" className="w-full h-full z-[-10] absolute "/> */}
-                <div className="flex flex-col h-full items-center justify-center z-100">
-                  <h1 className="text-[40px] font-bold text-[#ffffff]">
-                    Official Advertising Representative of{" "}
-                  </h1>
-                  <h1 className="text-[60px] tracking-[5px] font-bold text-[#ffffff]">
-                    The New York Times
+              <div key={idx} className="h-[calc(100vh-100px)] w-full relative">
+                <div className="image-container w-[100%] h-[100%] object-cover absolute inset-0 z-[-20]">
+                  <img
+                    src={item.img}
+                    alt=""
+                    className="w-[110%] h-full object-cover"
+                  />
+                  <div className="overlay absolute inset-0"></div>
+                </div>
+                <div className="flex flex-col h-full items-center justify-center absolute inset-0 z-10 px-5">
+          <h1 className="text-[20px] sm:text-[30px] lg:text-[40px] text-wrap px-5 text-white  text-center w-full">
+            Official Advertising Representative of
+          </h1>
+                  <h1 className="text-center text-[35px] md:text-[50px] lg:text-[60px] xl:text-[80px] tracking-[5px] font-bold text-white">
+                    {item.name}
                   </h1>
                 </div>
               </div>

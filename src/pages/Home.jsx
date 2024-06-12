@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Cities from "../components/Cities";
 import Hero from "../components/home/Hero";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import featuredPosts from "../constants";
+import { clients, experience, featuredPosts, services } from "../constants";
 import PostCard from "../components/PostCard";
+import ServiceCard from "../components/ServiceCard";
 
 const offers = [
   {
@@ -103,41 +104,6 @@ const settings = {
   ],
 };
 
-const clientImages = [
-  { img: "public/images/clients/bahria-town.png", name: "Bahria Town" },
-  {
-    img: "public/images/clients/Coat_of_arms_of_Punjab.png",
-    name: "Government of Punjab ",
-  },
-  {
-    img: "public/images/clients/Coat_of_arms_of_Sindh_Province.png",
-    name: "Government of Sindh",
-  },
-  { img: "public/images/clients/Ispr.jpg", name: "ISPR" },
-  { img: "public/images/clients/KP_logo.png", name: "Government of KPK" },
-  {
-    img: "public/images/clients/ministry-of-privatation.jpeg",
-    name: "Privatisation Commission of Pakistan",
-  },
-  {
-    img: "public/images/clients/OGDCL_logo.png",
-    name: "Oil and Gas Development Company Limited ",
-  },
-  { img: "public/images/clients/PakTelecom.png", name: "PTA" },
-  {
-    img: "public/images/clients/ppib_logo.png",
-    name: "Private Power and Infrastructure Board ",
-  },
-  {
-    img: "public/images/clients/pseb.png",
-    name: "Pakistan Software Export Board",
-  },
-  {
-    img: "public/images/clients/board-of-investment.png",
-    name: "Board of Investmen",
-  },
-];
-
 const heroSectionContent = [
   {
     img: "https://channel7.com.pk/wp-content/uploads/2023/04/Jawad-Humayun.jpg",
@@ -154,6 +120,10 @@ const heroSectionContent = [
 ];
 
 function Home() {
+  useEffect(() => {
+    // Scroll to the top on initial render
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Hero />
@@ -180,13 +150,55 @@ function Home() {
           </h1>
           <div className="image-slider-container overflow-hidden">
             <Slider {...settings} className="test">
-              {clientImages.map((client, index) => (
+              {clients.map((client, index) => (
                 <div key={index} className="mx-5">
                   <img src={client.img} className="h-[100px] mx-auto" />
                   <p className="text-center font-bold my-2">{client.name}</p>
                 </div>
               ))}
             </Slider>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-[100%] py-[60px]">
+        <div className="container mx-auto h-fit">
+          <h1 className="text-[35px] font-bold text-primary text-center mb-5">
+            Our Services
+          </h1>
+          <div className="flex items-center justify-center flex-wrap mx-auto w-full">
+            {/* <Slider {...settings} className="test"> */}
+            {services.map((service, index) => (
+              <ServiceCard key={index} {...service} />
+            ))}
+            {/* </Slider> */}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-[100%] py-[60px]">
+        <div className="container mx-auto h-fit">
+          <h1 className="text-[35px] font-bold text-primary text-center mb-5">
+            Experience
+          </h1>
+          <div className="flex items-center justify-center flex-wrap mx-auto w-full">
+            {experience.map((exp, index) => (
+              <div
+                key={index}
+                className="p-8 rounded-[10px] cursor-pointer transition-all transition-1000 hover:bg-[#e6e6e6] m-5 bg-[#f5f5f5] border-[#c0c0c0] border-[1px] flex justify-center gap-4"
+              >
+                {/* `<div className="w-[300px] bg-red-300">
+                  <img src={exp.logo} className="w-[100px]" alt="" />
+                </div>` */}
+                <div className="">
+                  <h1 className="text-[30px]">{exp.role}</h1>
+                  <h4 className="text-[24px] font-bold">{exp.company}</h4>
+                  <p className="text-[24px]">{exp.location}</p>
+                  <h5 className="text-[24px]">{exp.date}</h5>
+                  <p className=" text-[20px] my-2 line-clamp-2">{exp.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -238,129 +250,74 @@ function Home() {
         </div>
       </section>
 
-      {/* why choose us  */}
-      {/* <section className="w-[100%]">
-        <div className="container mx-auto h-full  px-5 py-[60px]">
-          <h4 className="uppercase text-primary font-medium text-lg">
-            Why choose us
-          </h4>
-
-          <div className=" flex flex-col lg:flex-row items-center justify-between gap-10 flex-wrap">
-            <div className="py-5 flex-1">
-              <h1 className="text-[35px] font-bold text-primary ">
-                A Brief Intro
-              </h1>
-              <p className="text-[25px] my-8 text-[#6f6c8c] ">
-                With the dawn of human civilization, people have strived to
-                communicate through signals, words, manuscripts, books till
-                contemporary digital world. It is an essential part of what
-                makes us human. The need to communicate continues to this day
-                and we, at Channel 7 Communications since its inception in 1990,
-                are here to cater to this essential need.
-              </p>
-              <a
-                className="my-6 cursor-pointer uppercase border-[2px] border-[#000000] text-[#000000] rounded-[5px] px-8 py-4 font-semibold hover:bg-[#000000] hover:text-[white] transition-all duration-1000"
-              >
-                Discover more
-              </a>
-            </div>
-
-            <div className="py-5 flex-1">
-              <img
-                className="rounded-[20px] img-shadow"
-                src="https://channel7.com.pk/wp-content/uploads/2023/03/Brief-Intro.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* What we do  */}
-      {/* <section className="w-[100%] ">
-        <div className="container mx-auto h-full  px-5 py-[60px]">
-          <div className=" flex flex-col-reverse lg:flex-row items-center justify-between gap-10 flex-wrap">
-            <div className="py-5 flex-1">
-              <img
-                className=""
-                src="https://channel7.com.pk/wp-content/uploads/2023/03/WhatPic.png"
-                alt=""
-              />
-            </div>
-            <div className="py-5 flex-1">
-              <h1 className="text-[35px] font-bold text-primary ">
-                What We Do
-              </h1>
-              <p className="text-[25px] my-8 text-[#6f6c8c] ">
-                At Channel 7 Communications, we offer a wide range of essential
-                services to meet all your communication needs. Our expertise
-                includes brand development, conventional media productions,
-                digital solutions, public relations, and media services. We have
-                a proven track record to partner with you to achieve your dreams
-                and objectives. Our ` yes we can` attitude enables us to deliver
-                out of the box solutions tailored to your unique requirements.
-              </p>
-              <a
-                className="my-6 cursor-pointer uppercase border-[2px] border-[#000000] text-[#000000] rounded-[5px] px-8 py-4 font-semibold hover:bg-[#000000] hover:text-[white] transition-all duration-1000"
-              >
-                Discover more
-              </a>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* What We Offer  */}
-      {/* <section className="w-[100%] min-h-[100vh]">
-        <div className="container mx-auto h-full  px-5 py-[60px]">
-          <h1 className="text-[35px] font-bold text-primary text-center">
-            What We Offer
-          </h1>
-          <div className=" flex items-center justify-between flex-wrap py-8">
-            {offers.map((offer, idx) => (
-              <div
-                key={idx}
-                className="mb-10  w-[100%] md:w-[48%] lg:w-[30%] xl:w-[24%] flex-none h-[500px] bg-[#0000009d] rounded-[15px] text-white hover:scale-[1.05] hover:bg-[#000000] transition-all duration-500 "
-              >
-                <div className="flex flex-col items-center justify-between py-7 h-full gap-3">
-                  <div className="flex flex-col items-center gap-4">
-                    <img className="w-[150px] " src={offer.icon} alt="" />
-                    <h1 className="text-[25px] text-center font-bold ">
-                      {offer.heading}
-                    </h1>
-                    <ul className=" text-center font-bold">
-                      {offer.list.map((item, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-center justify-center"
-                        >
-                          <div className="inline-block w-[6px] h-[6px] rounded-full bg-white mr-1 "></div>{" "}
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <button className="font-bold text-lg px-8 text-center border-white border-[2px] hover:bg-white hover:text-[#000000] rounded-[5px] py-3 group transition-all duration-1000">
-                      Read More
-                      <svg
-  
-                        className="w-[20px] fill-white group-hover:fill-[#000000] inline-block ml-3  "
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512"
-                        stroke="currentColor"
-                      >
-                        <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
+      {/* contact us  */}
+      <section className="py-8">
+        <div className="container mx-auto px-5 py-[60px]">
+          <div className="w-full lg:w-[70%] h-full bg-gray-100 p-10 mx-auto">
+            <h1 className="text-[35px] md:text-[50px] text-primary ">
+              Drop Us a Line
+            </h1>
+            <p className="text-[20px] ">For any query and consultant</p>
+            <form className="my-5">
+              <div className="">
+                <label htmlFor="" className="block w-full my-4">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  className="block w-full text-[20px] bg-transparent outline-none focus:outlline-none border-[black] focus:border-b-[#6494ed] border-b-[1px]  "
+                />
               </div>
-            ))}
+
+              <div className="">
+                <label htmlFor="" className="block w-full my-4">
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  className="block w-full text-[20px] bg-transparent outline-none focus:outlline-none border-[black] focus:border-b-[#6494ed] border-b-[1px]  "
+                />
+              </div>
+
+              <div className="">
+                <label htmlFor="" className="block w-full my-4">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  name="subject"
+                  className="block w-full text-[20px] bg-transparent outline-none focus:outlline-none border-[black] focus:border-b-[#6494ed] border-b-[1px] "
+                />
+              </div>
+
+              <div className="">
+                <label htmlFor="" className="block w-full my-4">
+                  Your Message (<span>Optional</span>)
+                </label>
+                <textarea
+                  rows={4}
+                  name="subject"
+                  className="block w-full text-[20px] bg-transparent outline-none focus:outlline-none border-[black] focus:border-b-[#6494ed] border-b-[1px] "
+                ></textarea>
+              </div>
+
+              <div className="flex flex-col md:flex-row text-center md:items-center justify-between my-10 gap-7">
+                <button className="px-9 py-3 font-semibold bg-[#343434b5] hover:bg-[#000000] text-white transition-all duration-1000">
+                  Submit
+                </button>
+                <a
+                  href="#"
+                  className="px-9 py-3 font-semibold bg-[#000000b5] hover:bg-[#000000b5] text-white  transition-all duration-1000"
+                >
+                  Contact Us on Whatsapp
+                </a>
+              </div>
+            </form>
           </div>
         </div>
-      </section> */}
+      </section>
 
       <Cities />
     </>

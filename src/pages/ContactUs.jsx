@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Cities from "../components/Cities";
 
 function ContactUs() {
+  useEffect(() => {
+    // Scroll to the top on initial render
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="">

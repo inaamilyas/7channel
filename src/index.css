@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 .background-color {
   background: #000000 !important;
 }
@@ -21,22 +25,22 @@
   background: #ffffff !important;
   color: #000000 !important;
 }
-.post-shadow{
+.post-shadow {
   border: 1px solid white;
-  box-shadow: 1px 1px 20px #5d5d5d !important;
+  box-shadow: 1px 1px 20px #5d5d5d61 !important;
 }
 .img-shadow {
   box-shadow: 20px 20px 0px #000000 !important;
 }
 .bg-home-hero {
-  background: linear-gradient(hwb(0 0% 100% / 0.434), rgba(0, 0, 0, 0.495)),
+  background: linear-gradient(hwb(0 0% 100% / 0.434), rgba(66, 65, 65, 0.495)),
     url("../public/images/hero-bg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .gradient-bg {
-  background: linear-gradient(to bottom, #ffffff, #00000048);
+  background: linear-gradient(to bottom, #ffffff, #b8b8b848);
 }
 
 .bg-whoweare {
@@ -82,18 +86,41 @@
 
 .test .slick-track {
   display: flex !important;
-  gap: 2vw !important;
-  /* height: 80vh !important; */
 }
 
 .pro .slick-track {
+  width: 100% !important;
   display: flex !important;
-  gap: 2vw !important;
-  /* margin: 0vw 12vw !important; */
 }
 
-@media screen and (max-width: 1400px) {
-  .pro .slick-track {
-    margin: 0vw !important;
-  }
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  position: absolute !important;
+  z-index: -10 !important;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.619);
+  z-index: -9 !important;
+}
+
+
+.service-icon svg{
+  width: 100px !important;
+  height: 100px !important;
 }
