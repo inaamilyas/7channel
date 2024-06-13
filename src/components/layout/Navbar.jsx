@@ -59,7 +59,7 @@ function Navbar() {
                 className="text-[14px] sm:text-[25px] font-bold cursor-pointer text-color"
               >
                 Elision Advertising SMC Private (Ltd)
-                <span class="text-xs align-top">(R)</span>
+                <span className="text-xs align-top">(R)</span>
                 <br />
                 <span className="block mr-6 tracking-[2px] text-[8px] sm:text-[16px] text-right">Your Gateway to International Media</span>  
               </Link>

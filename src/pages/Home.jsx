@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Cities from "../components/Cities";
 import Hero from "../components/home/Hero";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
 import { clients, experience, featuredPosts, services } from "../constants";
 import PostCard from "../components/PostCard";
 import ServiceCard from "../components/ServiceCard";
+import ExperienceItem from "../components/home/ExperienceItem";
 
 const offers = [
   {
@@ -176,6 +176,49 @@ function Home() {
         </div>
       </section>
 
+      <section className="w-[100%] ">
+        <div className="container mx-auto h-full  px-5 py-[60px]">
+          <h1 className="text-[35px] font-bold text-primary text-center mb-5">
+            About
+          </h1>
+          <div className=" flex flex-col-reverse lg:flex-row items-start justify-between gap-10 flex-wrap">
+            <div className="flex-1 border-[2px shadow-md">
+              <img
+                className="w-full"
+                src="https://channel7.com.pk/wp-content/uploads/2023/03/WhatPic.png"
+                alt=""
+              />
+            </div>
+            <div className="flex-1">
+              <p className="text-[25px] mb-8 text-[#6f6c8c] ">
+                An experienced advertising professional with experience
+                exceeding 8+ Years in Media and Public Relations Industry along
+                with expertise in managing Government Relations.{" "}
+              </p>
+              <p className="text-[25px] my-8 text-[#6f6c8c] ">
+                I have the honor for being{" "}
+                <b>
+                  first ever Exclusive Representative of The New York Times for
+                  Pakistan
+                </b>{" "}
+                and successfully managFed other top media brands like The Globe
+                and Mail (AJR Media Group) and South China Morning Post.{" "}
+              </p>
+              <p className="text-[25px] my-8 text-[#6f6c8c] ">
+                My experience and skills speak for themselves as managing
+                International Brands on Country Level and maintaining efficient
+                government relations is something which is rare to find.
+              </p>
+              <p className="text-[25px] my-8 text-[#6f6c8c] ">
+                For any queries or questions relevant to International
+                Marketing, please message me at LinkedIn or email me at:
+                waqarahmedsalam@gmail.com{" "}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="w-[100%] py-[60px]">
         <div className="container mx-auto h-fit">
           <h1 className="text-[35px] font-bold text-primary text-center mb-5">
@@ -183,26 +226,13 @@ function Home() {
           </h1>
           <div className="flex items-center justify-center flex-wrap mx-auto w-full">
             {experience.map((exp, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-[10px] cursor-pointer transition-all transition-1000 hover:bg-[#e6e6e6] m-5 bg-[#f5f5f5] border-[#c0c0c0] border-[1px] flex justify-center gap-4"
-              >
-                {/* `<div className="w-[300px] bg-red-300">
-                  <img src={exp.logo} className="w-[100px]" alt="" />
-                </div>` */}
-                <div className="">
-                  <h1 className="text-[30px]">{exp.role}</h1>
-                  <h4 className="text-[24px] font-bold">{exp.company}</h4>
-                  <p className="text-[24px]">{exp.location}</p>
-                  <h5 className="text-[24px]">{exp.date}</h5>
-                  <p className=" text-[20px] my-2 line-clamp-2">{exp.desc}</p>
-                </div>
-              </div>
+              <ExperienceItem key={index} exp={exp} />
             ))}
           </div>
         </div>
       </section>
 
+      
       <section className="w-[100%] gradient-bg ">
         <div className="container mx-auto h-full px-5 py-[60px]">
           <div className="h-full flex flex-col lg:flex-row items-center justify-between gap-10">
@@ -319,7 +349,7 @@ function Home() {
         </div>
       </section>
 
-      <Cities />
+      {/* <Cities /> */}
     </>
   );
 }
