@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 function ExperienceItem({ exp }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  // const [isExpanded, setIsExpanded] = useState(false);
 
-  const toggleReadMore = () => {
-    setIsExpanded(!isExpanded);
-  };
+  // const toggleReadMore = () => {
+  //   setIsExpanded(!isExpanded);
+  // };
   return (
     <div className="p-8 rounded-[10px] cursor-pointer transition-all transition-1000 hover:bg-[#e6e6e6] m-5 bg-[#f5f5f5] border-[#c0c0c0] border-[1px] flex justify-center gap-4">
       {/* `<div className="w-[300px] bg-red-300">
@@ -17,15 +17,13 @@ function ExperienceItem({ exp }) {
         <p className="text-[24px]">{exp.location}</p>
         <h5 className="text-[24px]">{exp.date}</h5>
         <p
-          className={`text-[20px] my-2 transition-all duration-1000 ${
-            isExpanded ? "line-clamp-none" : "line-clamp-3 lg:line-clamp-2"
-          }`}
+          className={`text-[20px] my-2 transition-all duration-1000 `}
         >
           {exp.desc}
         </p>
-        <button onClick={toggleReadMore} className="text-blue-500 text-lg mt-2">
+        {/* <button onClick={toggleReadMore} className="text-blue-500 text-lg mt-2">
           {isExpanded ? "Read Less" : "Read More"}
-        </button>
+        </button> */}
       </div>
     </div>
   );

@@ -58,8 +58,8 @@ function ClientsSlider() {
   };
   return (
     <>
-      <section className="w-[100%] py-[60px]">
-        <div className="container w-[60%] mx-auto h-fit">
+      <section className="w-[100%] py-[60px] gradient-bg">
+        <div className="container w-[80%] md:w-[60%] mx-auto h-fit">
           <h1 className="text-[35px] font-bold text-primary text-center mb-5">
             Our Clients
           </h1>

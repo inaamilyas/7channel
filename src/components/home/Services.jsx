@@ -5,7 +5,7 @@ import ServiceCard from "../ServiceCard";
 function Services() {
   return (
     <>
-      <section className="w-[100%] py-[60px]">
+      <section className="w-[100%] py-[60px] gradient-bg">
         <div className="container mx-auto h-fit">
           <h1 className="text-[35px] font-bold text-primary text-center mb-5">
             Our Services
