@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PostCard from "../components/PostCard";
-import { featuredPosts } from "../constants";
+import { featuredPosts } from "../constants/";
 function Posts() {
   const { id } = useParams();
   const [post, setPost] = useState(featuredPosts[0]);
 
   useEffect(() => {
-    // Scroll to the top on initial render
     window.scrollTo(0, 0);
 
     const foundPost = featuredPosts.find((post) => post.id === id);
@@ -19,7 +18,11 @@ function Posts() {
       <section className="w-[100%] bg-[#e5e5e5]">
         <div className="container mx-auto h-full py-[50px] sm:px-5 ">
           <div className="h-full w-full mx-auto shadow-2xl flex flex-col lg:flex-row gap-10 md:p-10 bg-white cursor-pointer">
-            <img src={post?.image} className=" object-cover h-[500px] mx-auto" alt="" />
+            <img
+              src={post?.image}
+              className=" object-cover h-[500px] mx-auto"
+              alt=""
+            />
             <p className="text-[23px] p-4 md:p-0">{post?.desc}</p>
           </div>
         </div>

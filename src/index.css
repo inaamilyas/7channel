@@ -9,66 +9,34 @@
 .background-color {
   background: #000000 !important;
 }
+
 .text-color {
   color: #ffffff !important;
 }
+
 .text-primary {
   color: #000000 !important;
 }
+
 .navbar-item {
   font-size: 18px;
   font-weight: bold;
   transition: all 0.8s;
 }
+
 .active,
 .navbar-item:hover {
   background: #ffffff !important;
   color: #000000 !important;
 }
+
 .post-shadow {
   border: 1px solid white;
   box-shadow: 1px 1px 20px #5d5d5d61 !important;
 }
-.img-shadow {
-  box-shadow: 20px 20px 0px #000000 !important;
-}
-.bg-home-hero {
-  background: linear-gradient(hwb(0 0% 100% / 0.434), rgba(66, 65, 65, 0.495)),
-    url("../public/images/hero-bg.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .gradient-bg {
   background: linear-gradient(to bottom, #ffffff, #b8b8b848);
-}
-
-.bg-whoweare {
-  background: linear-gradient(#6494ed29, #000000),
-    url("../public/images/who-we-are.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.offer-bg {
-  background: linear-gradient(#6494ed29, #000000),
-    url("../public/images/what-we-offer.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.about-bg {
-  background: linear-gradient(#6494ed29, #000000),
-    url("../public/images/about-page-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.who-heading {
-  font-size: 40px;
-  letter-spacing: 1px;
-  font-weight: 800;
-  color: black;
 }
 
 .slick-prev,
@@ -92,7 +60,6 @@
   width: 100% !important;
   display: flex !important;
 }
-
 
 .image-container {
   position: relative;
@@ -119,8 +86,7 @@
   z-index: -9 !important;
 }
 
-
-.service-icon svg{
+.service-icon svg {
   width: 100px !important;
   height: 100px !important;
 }

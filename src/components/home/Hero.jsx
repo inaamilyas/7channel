@@ -40,7 +40,7 @@ function Hero() {
                   <img
                     src={item.img}
                     alt=""
-                    className="w-[110%] h-full object-cover"
+                    className="w-[100%] h-full object-cover"
                   />
                   <div className="overlay absolute inset-0"></div>
                 </div>
