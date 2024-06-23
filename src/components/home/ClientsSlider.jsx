@@ -66,7 +66,7 @@ function ClientsSlider() {
           <div className="image-slider-container overflow-hidden">
             <Slider {...settings} className="test">
               {clients.map((client, index) => (
-                <div key={index} className="mx-5">
+                <div key={index} className="md:mx-5">
                   <img src={client.img} className="h-[100px] mx-auto" />
                   <p className="text-center font-bold my-2">{client.name}</p>
                 </div>
